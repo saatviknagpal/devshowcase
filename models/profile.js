@@ -49,6 +49,7 @@ const profileSchema = new mongoose.Schema(
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Project",
+        autopopulate: true
       },
     ],
     user_id: {
@@ -58,6 +59,8 @@ const profileSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+profileSchema.plugin(require('mongoose-autopopulate'));
 
 module.exports =
   mongoose.models.Profile || mongoose.model("Profile", profileSchema);

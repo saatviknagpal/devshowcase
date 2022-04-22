@@ -31,6 +31,7 @@ const projectSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Profile",
     required: true,
+    autopopulate: true
   },
   comments: [
     {
@@ -38,6 +39,9 @@ const projectSchema = new mongoose.Schema({
     },
   ],
 });
+
+projectSchema.plugin(require('mongoose-autopopulate'));
+
 
 module.exports =
   mongoose.models.Project || mongoose.model("Project", projectSchema);
