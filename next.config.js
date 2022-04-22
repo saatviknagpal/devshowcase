@@ -3,4 +3,5 @@ module.exports = {
     domains: ["res.cloudinary.com"],
   },
   env: {},
+  presets: ["next/babel"],
 };
