@@ -1,4 +1,4 @@
-# Devshowcase App
+# Devshowcase Apps
 
 ## Tech Stack -> Next JS, Tailwind CSS, REST API
 
